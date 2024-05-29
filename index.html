@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Piano</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="drum-kit">
+      <div class="key" data-key="1"><span>1</span><audio id="1" src="kick.wav" data-key="1"></audio></div>
+      <div class="key" data-key="2"><span>2</span><audio id="2" src="hi-hat.wav" data-key="2"></audio></div>
+      <div class="key" data-key="3"><span>3</span><audio id="3" src="snare.wav" data-key="3"></audio></div>
+  </div>
+
+  <div id="piano">
+    <div class="key white-key" data-key="A"><span>C</span><audio id="A" src="Organ Organ C.wav" data-key="A"></audio></div>
+    <div class="key black-key" data-key="W"><span>C#</span><audio id="W" src="Organ Organ C2.wav" data-key="W"></audio></div>
+    <div class="key white-key" data-key="S"><span>D</span><audio id="S" src="Organ Organ D.wav" data-key="S"></audio></div>
+    <div class="key black-key" data-key="E"><span>D#</span><audio id="E" src="Organ Organ D2.wav" data-key="E"></audio></div>
+    <div class="key white-key" data-key="D"><span>E</span><audio id="D" src="Organ Organ E.wav" data-key="D"></audio></div>
+    <div class="key white-key" data-key="F"><span>F</span><audio id="F" src="Organ Organ F.wav" data-key="F"></audio></div>
+    <div class="key black-key" data-key="T"><span>F#</span><audio id="T" src="Organ Organ F2.wav" data-key="T"></audio></div>
+    <div class="key white-key" data-key="G"><span>G</span><audio id="G" src="Organ Organ G.wav" data-key="G"></audio></div>
+    <div class="key black-key" data-key="Y"><span>G#</span><audio id="Y" src="Organ Organ G2.wav" data-key="Y"></audio></div>
+    <div class="key white-key" data-key="H"><span>A</span><audio id="H" src="Organ Organ A.wav" data-key="H"></audio></div>
+    <div class="key black-key" data-key="U"><span>A#</span><audio id="U" src="Organ Organ A2.wav" data-key="U"></audio></div>
+    <div class="key white-key" data-key="J"><span>B</span><audio id="J" src="Organ Organ B.wav" data-key="J"></audio></div>
+
+    <div class="key white-key" data-key="K"><span>C</span><audio id="K" src="Organ1 Organ C1.wav" data-key="K"></audio></div>
+    <div class="key black-key" data-key="O"><span>C#</span><audio id="O" src="Organ1 Organ C21.wav" data-key="O"></audio></div>
+    <div class="key white-key" data-key="L"><span>D</span><audio id="L" src="Organ1 Organ D1.wav" data-key="L"></audio></div>
+    <div class="key black-key" data-key="P"><span>D#</span><audio id="P" src="Organ1 Organ D21.wav" data-key="P"></audio></div>
+    <div class="key white-key" data-key=";"><span>E</span><audio id=";" src="Organ1 Organ E1.wav" data-key=";"></audio></div>
+    <div class="key white-key" data-key="'"><span>F</span><audio id="'" src="Organ1 Organ F1.wav" data-key="'"></audio></div>
+    <div class="key black-key" data-key="["><span>F#</span><audio id="[" src="Organ1 Organ F21.wav" data-key="["></audio></div>
+    <div class="key white-key" data-key="]"><span>G</span><audio id="]" src="Organ1 Organ G1.wav" data-key="]"></audio></div>
+    <div class="key black-key" data-key="\""><span>G#</span><audio id="\" src="Organ1 Organ G21.wav" data-key="\"></audio></div>
+    <div class="key white-key" data-key="Z"><span>A</span><audio id="Z" src="Organ1 Organ A1.wav" data-key="Z"></audio></div>
+    <div class="key black-key" data-key="X"><span>A#</span><audio id="X" src="Organ1 Organ A21.wav" data-key="X"></audio></div>
+    <div class="key white-key" data-key="C"><span>B</span><audio id="C" src="Organ1 Organ B1.wav" data-key="C"></audio></div>
+  </div>
+
+  <div id="sound-selection">
+    <label for="sound-set-select">Sound:</label>
+    <select id="sound-set-select">
+      <option value="set2">Organ</option>
+      <option value="set1">Guitar</option>
+    </select>
+  </div>
+  <div id="buttons">
+    <button id="record-button">Record</button>
+    <button id="stop-button" disabled>Stop</button>
+    <button id="play-button" disabled>Play</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

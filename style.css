@@ -1,0 +1,130 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, bisque, brown);
+  color: #fff;
+}
+
+#drum-kit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#drum-kit .key {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.07s ease;
+  margin: 0 10px;
+}
+
+#piano {
+  display: flex;
+  position: relative;
+}
+
+.white-key {
+  width: 60px;
+  height: 200px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.black-key {
+  width: 40px;
+  height: 120px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  margin: 0 1px;
+  z-index: 2;
+}
+
+.black-key[data-key="W"] { left: 45px; }
+.black-key[data-key="E"] { left: 105px; }
+.black-key[data-key="T"] { left: 225px; }
+.black-key[data-key="Y"] { left: 285px; }
+.black-key[data-key="U"] { left: 345px; }
+
+
+.black-key[data-key="O"] { left: 465px; }
+.black-key[data-key="P"] { left: 525px; }
+.black-key[data-key="["] { left: 645px; }
+.black-key[data-key="\\"] { left: 705px; }
+.black-key[data-key="X"] { left: 765px; }
+
+.key.active {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
+}
+
+.key:active, .key:focus {
+  outline: none;
+  transform: scale(0.95);
+}
+
+#sound-selection {
+  margin-top: 20px;
+}
+
+#sound-set-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background: #333;
+  color: #fff;
+}
+
+#buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#buttons button {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.07s ease;
+  margin: 0 10px;
+  background: #333;
+  color: #fff;
+}
+
+#buttons button:disabled {
+  border: 2px solid #888;
+  background: #555;
+  cursor: not-allowed;
+}
